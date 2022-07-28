@@ -1,0 +1,243 @@
+// .container {
+//     display: flex;
+//     align-items: center;
+// }
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 3px solid #ff6666;
+
+
+    &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    margin-left: 30px;
+   
+    }
+
+    &__h1 {
+        text-transform: uppercase;
+        font-size: 22px;
+        letter-spacing: 5px;
+        font-weight: 400;
+        line-height: 1;
+        font-family: 'FredokaOne', sans-serif;
+    }
+
+    &__span {
+        color: #ff3f4c;
+    }
+
+    &__h3 {
+        font-family: 'Manrope';
+        font-size: 10px;
+        font-weight: 500;
+        color: #000000;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: 5px;
+    }
+
+    &__search_bar {
+        width: 540px;
+        height: 40px;
+    
+        background: white;
+        border-radius: 31px;
+        border: 1px solid;
+        border-color: #000000;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__search_bar_txt {
+        width: 81%;
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+
+        border: 0;
+        outline: none;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    &__img {
+        margin-right: 15px;
+        margin-left: 19px;
+    }
+
+    ::placeholder {
+        color: #BFBEBE;
+    }
+
+    &__btn {
+        cursor: pointer;
+        border: 0;
+        background: none;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__menu ul {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    &__menu li {
+        list-style: none;
+    }
+
+    &__menu li a {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #464646;
+        font-weight: 600;
+        text-decoration: none;  
+       
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+    }
+
+    &__menu li a:hover {
+        color: #ff3f4c;
+    }
+
+    &__user_btn {
+            align-self: center;
+      }
+
+      &__user_btn button {
+            width: 40px;
+            height: 40px;
+            align-self: center;
+    
+            background-color: #ff3f4c;
+            border-radius: 4px;
+            cursor: pointer;
+            background-size: 22px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url(../img/user.png);
+      }
+      .popup {
+        position:fixed;
+        top:-150%;
+        left:50%;
+        opacity:0;
+        z-index: 13;
+        transform:translate(-50%,-50%) scale(1.25);
+        width:380px;
+        padding:20px 30px;
+        background:#fff;
+        box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+        border-radius:10px;
+        transition:top 0ms ease-in-out 200ms,
+                   opacity 200ms ease-in-out 0ms,
+                   transform 200ms ease-in-out 0ms; 
+      }
+      .popup.active {
+        top:50%;
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+        transition:top 0ms ease-in-out 0ms,
+                   opacity 200ms ease-in-out 0ms,
+                   transform 200ms ease-in-out 0ms;
+      }
+      .popup .close-btn {
+        position:absolute;
+        top:10px;
+        right:10px;
+        width:15px;
+        height:15px;
+        background:#888;
+        color:#eee;
+        text-align:center;
+        line-height:15px;
+        border-radius:15px;
+        cursor:pointer;
+      }
+      .popup .form h2 {
+        text-align:center;
+        color:#222;
+        margin:10px 0px 20px;
+        font-size:25px;
+      }
+      .popup .form .form-element {
+        margin:15px 0px;
+      }
+      .popup .form .form-element label {
+        font-size:14px;
+        color:#222;
+      }
+      .popup .form .form-element input[type="text"],
+      .popup .form .form-element input[type="password"] {
+        margin-top:5px;
+        display:block;
+        width:100%;
+        padding:10px;
+        outline:none;
+        border:1px solid #aaa;
+        border-radius:5px;
+      }
+      .popup .form .form-element input[type="checkbox"] {
+        margin-right:5px;
+      }
+      .popup .form .form-element button {
+        width:100%;
+        height:40px;
+        border:none;
+        outline:none;
+        font-size:16px;
+        background:#fff;
+        border: 1px solid #ff3f4c;
+        color:#ff3f4c;
+        border-radius:10px;
+        cursor:pointer;
+        transition: all 0.3s ease;
+      }
+
+      .popup .form .form-element button:hover{
+        background:#ff3f4c;
+        border: 1px solid #fff;
+        color: #fff;
+      }
+
+      .popup .form .form-element a {
+        display:block;
+        text-align:right;
+        font-size:15px;
+        color:#000000;
+        text-decoration:none;
+        font-weight:600;
+      }
+}
+

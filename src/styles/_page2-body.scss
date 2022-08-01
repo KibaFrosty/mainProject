@@ -1,5 +1,5 @@
 .ser-container {
-    position: relative;
+    padding: 53px 10px;
 
     &__title h1 {
         font-size: 32px;
@@ -22,7 +22,6 @@
         flex-wrap: wrap;
         flex-direction: row;
         padding: 60px 60px;
-        margin: 0 -60px;
         position: relative;
         margin-top: -30px;
     }
@@ -79,6 +78,11 @@
         line-height: 24px;
     }
 
+    .ser-r a {
+        color: #5a5959;
+    }
+
+
     .ser-r a:hover {
         color: #ff6666;
         
@@ -102,7 +106,7 @@
     }
 
     &__text {
-        width: 1400px;
+        width: 100%;
         line-height: 1.7;
         font-size: 15px;
         word-wrap: break-word;
@@ -202,6 +206,15 @@
         position: relative;
     }
 
+    &__soc-item span:hover {
+        transition: all 0.3s ease;
+        box-shadow:
+         -7px -7px 20px 0px #fff9,
+         -4px -4px 5px 0px #fff9,
+         7px 7px 20px 0px #0002,
+         4px 4px 5px 0px #0001;
+    }
+
     &__soc-ico {
         border-radius: 10px;
         font-size: 28px;
@@ -263,9 +276,6 @@
 
     &__player {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &__mylists {
@@ -288,14 +298,6 @@
         transition: all 0.3s ease;
     }
 
-    // &__mylists li.active {
-    //     background: #ff3f4c;
-    //     color: #fff;
-    //     border: 0px;
-    //     line-height: 22px;
-    //     border-radius: 3px;
-    // }
-
     &__mylists li:hover {
         background: #ff3f4c;
         color: #fff;
@@ -303,17 +305,38 @@
         border-radius: 3px;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 780px) {
+        &__body {
+            width: 85%;
+        }
+
+        &__title {
+            width: 48%;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        &__body {
+            width: 127%;
+        }
+
+        &__title {
+            width: 78%;
+        }
+    }
+
+    @media screen and (max-width: 490px) {
+
+        &__title {
+            width: 73%;
+        }
+    }
 }
 
 .ser-related {
     position: relative;
-    width: 1440px;
-
-    &__body {
-        position: relative;
-        left: 35%;
-        margin: 0 auto;
-    }
+    width: 100%;
 
     &__title {
         font-size: 20px;

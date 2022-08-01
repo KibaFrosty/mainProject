@@ -8,572 +8,599 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <title>Series killer</title>
 
 </head>
 <body>
-    <header class="header">
-            <div class="header__logo">
-                <h1 class="header__h1"><span class="header__span">SERIES</span>KILLER</h1>
-                <h3 class="header__h3">Смотреть сериалы онлайн</h3>
-            </div>
-                <div class="header__search">
-                    <form action="https://www.google.com/search" method="get" class="header__search_bar">
-                        <button class="header__btn" type="submit"><img class="header__img" src="./img/search.svg"></button>
-                        <input class="header__search_bar_txt" type="text" placeholder="Поиск сериалов на сайте SerialKiller..." name="q">
-                    </form>
-                </div>
 
-                    <div class="header__menu">
-                        <ul>
-                            <li>
-                                <a href="#">ТОП 100</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="#">РАСПИСАНИЕ</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="#">СЕРИАЛЫ 2022</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="#">МОИ ЗАКЛАДКИ</a>
-                            </li>
-                        </ul>
+    <header class="header">
+        <div class="container">
+            <div class="header-line">
+
+                <div class="header__logo">
+                    <h1 class="header__h1"><span class="header__span">SERIES</span>KILLER</h1>
+                    <h3 class="header__h3">Смотреть сериалы онлайн</h3>
+                </div>
+                    <div class="header__search">
+                        <form action="https://www.google.com/search" method="get" class="header__search_bar">
+                            <button class="header__btn" type="submit"><img class="header__img" src="./img/search.svg"></button>
+                            <input class="header__search_bar_txt" type="text" placeholder="Поиск сериалов на сайте SerialKiller..." name="q">
+                        </form>
                     </div>
 
-                    
-                        <div class="header__user_btn">
-                          <button id="show-login"></button>
+                        <div class="header__menu">
+                            <ul>
+                                <li>
+                                    <a href="#">ТОП 100</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">РАСПИСАНИЕ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">СЕРИАЛЫ 2022</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">МОИ ЗАКЛАДКИ</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="popup">
-                          <div class="close-btn">&times;</div>
-                          <div class="form">
-                            <h2>Войти</h2>
-                            <div class="form-element">
-                              <label for="email">Логин</label>
-                              <input type="text" id="email" placeholder="Введите логин">
+
+                        
+                            <div class="header__user_btn">
+                            <button id="show-login"></button>
                             </div>
-                            <div class="form-element">
-                              <label for="password">Пароль</label>
-                              <input type="password" id="password" placeholder="Введите пароль">
+                            <div class="popup">
+                            <div class="close-btn">&times;</div>
+                            <div class="form">
+                                <h2>Войти</h2>
+                                <div class="form-element">
+                                <label for="email">Логин</label>
+                                <input type="text" id="email" placeholder="Введите логин">
+                                </div>
+                                <div class="form-element">
+                                <label for="password">Пароль</label>
+                                <input type="password" id="password" placeholder="Введите пароль">
+                                </div>
+                                <div class="form-element">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Запомнить меня</label>
+                                </div>
+                                <div class="form-element">
+                                <button>Войти на сайт</button>
+                                </div>
+                                <div class="form-element">
+                                <a href="#">Забыли пароль?</a>
+                                </div>
                             </div>
-                            <div class="form-element">
-                              <input type="checkbox" id="remember-me">
-                              <label for="remember-me">Запомнить меня</label>
                             </div>
-                            <div class="form-element">
-                              <button>Войти на сайт</button>
-                            </div>
-                            <div class="form-element">
-                              <a href="#">Забыли пароль?</a>
-                            </div>
-                          </div>
-                        </div>
-                    
-                
+            </div>
+        </div>  
     </header>
 
 
     <main class="main">
+        <div class="container">
 
-        <aside class="col-side">
-            <div class="side-block">
-                <ul class="side-block__content side-block__menu">
-                    <li><a href="#">Жанры</a>
-                      <ul class="side-block__menu-hidden">
-                        <li><a href="#">Биография</a></li>
-                        <li><a href="#">Детективы</a></li>
-                        <li><a href="#">Фантастика</a></li>
-                        <li><a href="#">Боевики</a></li>
-                        <li><a href="#">Комедийные</a></li>
-                        <li><a href="#">Мистические</a></li>
-                        <li><a href="#">Ужасы</a></li>
-                        <li><a href="#">Фэнтези</a></li>
-                        <li><a href="#">Документальные</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Статус</a>
-                      <ul class="side-block__menu-hidden">
-                        <li><a href="#">Онгоинг</a></li>
-                        <li><a href="#">Завершенные</a></li>
-                        <li><a href="#">Анонс</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Тип</a>
-                      <ul class="side-block__menu-hidden">
-                        <li><a href="#">ТВ-сериал</a></li>
-                        <li><a href="#">ONA</a></li>
-                        <li><a href="#">Спешл</a></li>
-                        <li><a href="#">OVA</a></li>
-                        <li><a href="#">Фильм</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Сезон</a>
-                      <ul class="side-block__menu-hidden">
-                        <li><a href="#">Лето 2022</a></li>
-                        <li><a href="#">Весна 2022</a></li>
-                        <li><a href="#">Зима 2022</a></li>
-                        <li><a href="#">Осень 2021</a></li>
-                        <li><a href="#">Лето 2021</a></li>
-                        <li><a href="#">Весна 2021</a></li>
-                        <li><a href="#">Зима 2021</a></li>
-                        <li><a href="#">Осень 2020</a></li>
-                        <li><a href="#">Лето 2020</a></li>
-                        <li><a href="#">Весна 2020</a></li>
-                        <li><a href="#">Зима 2020</a></li>
-                      </ul>
-                    </li>
-                </ul>
-            </div>
+            <div class="menu-slider">
 
-            <div class="soc-chanel side-block">
-                <a href="#" target="_blank" class="soc-chanel__tg">Мы в Телеграм</a>
-            </div>
-        </aside>
-
-    
-        <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <div class="swiper-banners">
-                        <a href="../src/pages/movie-page.html"><img src="./img/banners/32282.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Лучше звоните Солу</span></a>
-                        <a href="../src/pages/movie-page.html"><img src="./img/banners/32507.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Барри</span></a>
-                        <a href="../src/pages/movie-page.html"><img src="./img/banners/33202.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Двенадцать</span></a>
-                        <a href="../src/pages/movie-page.html"><img src="./img/banners/33370.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Лоббист</span></a>
-                    </div>
+            <aside class="col-side">
+                <div class="side-block">
+                    <ul class="side-block__content side-block__menu">
+                        <li><a href="#">Жанры</a>
+                        <ul class="side-block__menu-hidden">
+                            <li><a href="#">Биография</a></li>
+                            <li><a href="#">Детективы</a></li>
+                            <li><a href="#">Фантастика</a></li>
+                            <li><a href="#">Боевики</a></li>
+                            <li><a href="#">Комедийные</a></li>
+                            <li><a href="#">Мистические</a></li>
+                            <li><a href="#">Ужасы</a></li>
+                            <li><a href="#">Фэнтези</a></li>
+                            <li><a href="#">Документальные</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Статус</a>
+                        <ul class="side-block__menu-hidden">
+                            <li><a href="#">Онгоинг</a></li>
+                            <li><a href="#">Завершенные</a></li>
+                            <li><a href="#">Анонс</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Тип</a>
+                        <ul class="side-block__menu-hidden">
+                            <li><a href="#">ТВ-сериал</a></li>
+                            <li><a href="#">ONA</a></li>
+                            <li><a href="#">Спешл</a></li>
+                            <li><a href="#">OVA</a></li>
+                            <li><a href="#">Фильм</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Сезон</a>
+                        <ul class="side-block__menu-hidden">
+                            <li><a href="#">Лето 2022</a></li>
+                            <li><a href="#">Весна 2022</a></li>
+                            <li><a href="#">Зима 2022</a></li>
+                            <li><a href="#">Осень 2021</a></li>
+                            <li><a href="#">Лето 2021</a></li>
+                            <li><a href="#">Весна 2021</a></li>
+                            <li><a href="#">Зима 2021</a></li>
+                            <li><a href="#">Осень 2020</a></li>
+                            <li><a href="#">Лето 2020</a></li>
+                            <li><a href="#">Весна 2020</a></li>
+                            <li><a href="#">Зима 2020</a></li>
+                        </ul>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>      
+                <div class="soc-chanel side-block">
+                    <a href="#" target="_blank" class="soc-chanel__tg">Мы в Телеграм</a>
+                </div>
+            </aside>
+
+        
+            <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-banners">
+                            <a href="../src/pages/movie-page.html"><img src="./img/banners/32282.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Лучше звоните Солу</span></a>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-banners">
+                            <a href="../src/pages/movie-page.html"><img src="./img/banners/33370.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Лоббист</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-banners">
+                            <a href="../src/pages/movie-page.html"><img src="./img/banners/32507.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Барри</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-banners">
+                            <a href="../src/pages/movie-page.html"><img src="./img/banners/33202.jpg" alt="1" class="main__img-portret"><br><span class="main__img-title">Двенадцать</span></a>
+                        </div>
+                    </div>
+                </div>   
+                
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>   
+        </div>
     </main>
 
 
     <section class="sec-1">
-        <div class="sec-1__header">
-            <h2 class="sec-1__title">Новые серии сериалов на <span>Series</span>Killer</h2>
-        </div>
-        <div class="sec-1__content">
-            <div class="sec-1__titles_block">
-                <div class="sec-1__titles_block_date">Сегодня, 20 июля</div>
+        <div class="container">
+            <div class="sec-1__header">
+                <h2 class="sec-1__title">Новые серии сериалов на <span>Series</span>Killer</h2>
             </div>
+            <div class="sec-1__content">
+                <div class="sec-1__titles_block">
+                    <div class="sec-1__titles_block_date">Сегодня, 20 июля</div>
+                </div>
 
-            <ul class="sec-1__block_list">
-                <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Лучше звоните Солу<br><span class="season">Better call Saul</span>
-                    </div>
-                    <span class="cell cell-2">198 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Барри<br><span class="season">Barry</span>
-                    </div>
-                    <span class="cell cell-2">8 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Мы владеем этим городом<br><span class="season">We own this city</span>
-                    </div>
-                    <span class="cell cell-2">45 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Двенадцать<br><span class="season">The twelve</span>
-                    </div>
-                    <span class="cell cell-2">16 серия</span>
-                </li></a>
-            </ul>
+                <ul class="sec-1__block_list">
+                    <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Лучше звоните Солу<br><span class="season">Better call Saul</span>
+                        </div>
+                        <span class="cell cell-2">198 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Барри<br><span class="season">Barry</span>
+                        </div>
+                        <span class="cell cell-2">8 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Мы владеем этим городом<br><span class="season">We own this city</span>
+                        </div>
+                        <span class="cell cell-2">45 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Двенадцать<br><span class="season">The twelve</span>
+                        </div>
+                        <span class="cell cell-2">16 серия</span>
+                    </li></a>
+                </ul>
 
-            <div class="sec-1__titles_block">
-                <div class="sec-1__titles_block_date">Сегодня, 19 июля</div>
+                <div class="sec-1__titles_block">
+                    <div class="sec-1__titles_block_date">Сегодня, 19 июля</div>
+                </div>
+
+                <ul class="sec-1__block_list">
+                    <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Лучше звоните Солу<br><span class="season">Better call Saul</span>
+                        </div>
+                        <span class="cell cell-2">198 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Барри<br><span class="season">Barry</span>
+                        </div>
+                        <span class="cell cell-2">8 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Мы владеем этим городом<br><span class="season">We own this city</span>
+                        </div>
+                        <span class="cell cell-2">45 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Двенадцать<br><span class="season">The twelve</span>
+                        </div>
+                        <span class="cell cell-2">16 серия</span>
+                    </li></a>
+                </ul>
+
+                <div class="sec-1__titles_block">
+                    <div class="sec-1__titles_block_date">Сегодня, 18 июля</div>
+                </div>
+
+                <ul class="sec-1__block_list">
+                    <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Лучше звоните Солу<br><span class="season">Better call Saul</span>
+                        </div>
+                        <span class="cell cell-2">198 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Барри<br><span class="season">Barry</span>
+                        </div>
+                        <span class="cell cell-2">8 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Мы владеем этим городом<br><span class="season">We own this city</span>
+                        </div>
+                        <span class="cell cell-2">45 серия</span>
+                    </li></a>
+                    <a href="#"><li class="sec-1__block_list_item">
+                        <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
+                        <div class="cell cell-1">
+                            Двенадцать<br><span class="season">The twelve</span>
+                        </div>
+                        <span class="cell cell-2">16 серия</span>
+                    </li></a>
+                </ul>
             </div>
-
-            <ul class="sec-1__block_list">
-                <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Лучше звоните Солу<br><span class="season">Better call Saul</span>
-                    </div>
-                    <span class="cell cell-2">198 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Барри<br><span class="season">Barry</span>
-                    </div>
-                    <span class="cell cell-2">8 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Мы владеем этим городом<br><span class="season">We own this city</span>
-                    </div>
-                    <span class="cell cell-2">45 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Двенадцать<br><span class="season">The twelve</span>
-                    </div>
-                    <span class="cell cell-2">16 серия</span>
-                </li></a>
-            </ul>
-
-            <div class="sec-1__titles_block">
-                <div class="sec-1__titles_block_date">Сегодня, 18 июля</div>
-            </div>
-
-            <ul class="sec-1__block_list">
-                <a href="../src/pages/movie-page.html"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32282.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Лучше звоните Солу<br><span class="season">Better call Saul</span>
-                    </div>
-                    <span class="cell cell-2">198 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32507.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Барри<br><span class="season">Barry</span>
-                    </div>
-                    <span class="cell cell-2">8 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/32511.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Мы владеем этим городом<br><span class="season">We own this city</span>
-                    </div>
-                    <span class="cell cell-2">45 серия</span>
-                </li></a>
-                <a href="#"><li class="sec-1__block_list_item">
-                    <img src="./img/banners/33202.jpg" alt="#" class="sec-1__block_list_item_img">
-                    <div class="cell cell-1">
-                        Двенадцать<br><span class="season">The twelve</span>
-                    </div>
-                    <span class="cell cell-2">16 серия</span>
-                </li></a>
-            </ul>
         </div>
     </section>
 
 
     <section class="sec-2">
-        <div class="sec-2__header">
-            <h2 class="sec-2__title">Новые сериалы на сайте</h2>
-            <div class="sec-2__filter">
+        <div class="container">
+            <div class="sec-2__header">
+                <h2 class="sec-2__title">Новые сериалы на сайте</h2>
+                <div class="sec-2__filter">
 
-                <div class="sec-2__container">              
-                    <div class="select-box">
+                    <div class="sec-2__container">              
+                        <div class="select-box">
+                            <div class="selected">
+                            Жанр
+                            </div>
+
+                            <div class="options-container">
+                            <div class="option">Биография</div>
+                    
+                            <div class="option">Детективы</div>
+                    
+                            <div class="option">Фантастика</div>
+                    
+                            <div class="option">Боевики</div>
+                    
+                            <div class="option">Комедийные</div>
+                    
+                            <div class="option">Мистические</div>
+                    
+                            <div class="option">Ужасы</div>
+                    
+                            <div class="option">Фэнтези</div>
+                    
+                            <div class="option">Документальные</div>
+                            </div>
+
+                        </div>
+
+                        <div class="select-box">
                         <div class="selected">
-                          Жанр
+                            Год
                         </div>
 
                         <div class="options-container">
-                          <div class="option">Биография</div>
+                            <div class="option">2022</div>
                 
-                          <div class="option">Детективы</div>
+                            <div class="option">2021</div>
                 
-                          <div class="option">Фантастика</div>
+                            <div class="option">2020</div>
                 
-                          <div class="option">Боевики</div>
+                            <div class="option">2019</div>
                 
-                          <div class="option">Комедийные</div>
+                            <div class="option">2018</div>
                 
-                          <div class="option">Мистические</div>
+                            <div class="option">2017</div>
                 
-                          <div class="option">Ужасы</div>
+                            <div class="option">2016</div>
                 
-                          <div class="option">Фэнтези</div>
+                            <div class="option">2015</div>
                 
-                          <div class="option">Документальные</div>
+                            <div class="option">2014</div>
                         </div>
 
+                        </div>
+
+                        <div class="select-box">
+                            <div class="selected">
+                            Тип
+                            </div>
+
+                            <div class="options-container">
+                            <div class="option">ТВ-сериал</div>
+                    
+                            <div class="option">OVA</div>
+                    
+                            <div class="option">ONA</div>
+                    
+                            <div class="option">Фильм</div>
+                    
+                            <div class="option">Спешл</div>
+            
+                            </div>
+
+                        </div>
+
+                        <div class="select-box">
+                            <div class="selected">
+                            Статус
+                            </div>
+
+                            <div class="options-container">
+                            <div class="option">Онгоинг</div>
+                    
+                            <div class="option">Завершено</div>
+                    
+                            <div class="option">Анонс</div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="select-box">
-                      <div class="selected">
-                        Год
-                      </div>
-
-                      <div class="options-container">
-                        <div class="option">2022</div>
-              
-                        <div class="option">2021</div>
-              
-                        <div class="option">2020</div>
-              
-                        <div class="option">2019</div>
-              
-                        <div class="option">2018</div>
-              
-                        <div class="option">2017</div>
-              
-                        <div class="option">2016</div>
-              
-                        <div class="option">2015</div>
-              
-                        <div class="option">2014</div>
-                      </div>
-
-                    </div>
-
-                     <div class="select-box">
-                        <div class="selected">
-                          Тип
-                        </div>
-
-                        <div class="options-container">
-                          <div class="option">ТВ-сериал</div>
-                
-                          <div class="option">OVA</div>
-                
-                          <div class="option">ONA</div>
-                
-                          <div class="option">Фильм</div>
-                
-                          <div class="option">Спешл</div>
-        
-                        </div>
-
-                      </div>
-
-                      <div class="select-box">
-                        <div class="selected">
-                          Статус
-                        </div>
-
-                        <div class="options-container">
-                          <div class="option">Онгоинг</div>
-                
-                          <div class="option">Завершено</div>
-                
-                          <div class="option">Анонс</div>
-                        </div>
-
-                      </div>
                 </div>
+            </div>
 
+            <div class="sec-2__content">
+                <a href="../src/pages/movie-page.html" class="sec-2__poster" data-filter-name="Документальные">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/32282.jpg" alt="#">
+                        <div class="sec-2__poster-label">114 / 48 серий</div>
+                        <div class="sec-2__poster-rate">9.5</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Лучше звоните Солу</h3>
+                    </div>
+                </a>
+                
+                <a href="#" class="sec-2__poster" data-filter-name="Боевики">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/32507.jpg" alt="#">
+                        <div class="sec-2__poster-label">16 / 8 серий</div>
+                        <div class="sec-2__poster-rate">7.9</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Барри</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="sec-2__poster" data-filter-name="Детективы">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/32511.jpg" alt="#">
+                        <div class="sec-2__poster-label">24 / 16 серий</div>
+                        <div class="sec-2__poster-rate">7.2</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Мы владеем этим городом</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="sec-2__poster" data-filter-name="Фэнтези">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/32927.jpg" alt="#">
+                        <div class="sec-2__poster-label">42 / 28 серий</div>
+                        <div class="sec-2__poster-rate">8.3</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Во тьме</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="sec-2__poster" data-filter-name="Документальные">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/33202.jpg" alt="#">
+                        <div class="sec-2__poster-label">12 / 7 серий</div>
+                        <div class="sec-2__poster-rate">9.1</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Двенадцать</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="sec-2__poster" data-filter-name="Биография">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/33370.jpg" alt="#">
+                        <div class="sec-2__poster-label">56 / 29 серий</div>
+                        <div class="sec-2__poster-rate">9.3</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Лоббист</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="sec-2__poster" data-filter-name="Фантастика">
+                    <div class="sec-2__poster-img">
+                        <img src="./img/banners/32887.jpg" alt="#">
+                        <div class="sec-2__poster-label">40 / 10 серий</div>
+                        <div class="sec-2__poster-rate">9.4</div>
+                    </div>
+                    <div class="sec-2__poster-desc">
+                        <h3 class="sec-2__poster-title">Мир Дикого запада</h3>
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="sec-2__pagination">
+                <div class="pagination">
+                    <ul></ul>
+                </div>
             </div>
         </div>
-
-        <div class="sec-2__content">
-            <a href="../src/pages/movie-page.html" class="sec-2__poster" data-filter-name="Документальные">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/32282.jpg" alt="#">
-                    <div class="sec-2__poster-label">114 / 48 серий</div>
-                    <div class="sec-2__poster-rate">9.5</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Лучше звоните Солу</h3>
-                </div>
-            </a>
-            
-            <a href="#" class="sec-2__poster" data-filter-name="Боевики">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/32507.jpg" alt="#">
-                    <div class="sec-2__poster-label">16 / 8 серий</div>
-                    <div class="sec-2__poster-rate">7.9</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Барри</h3>
-                </div>
-            </a>
-
-            <a href="#" class="sec-2__poster" data-filter-name="Детективы">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/32511.jpg" alt="#">
-                    <div class="sec-2__poster-label">24 / 16 серий</div>
-                    <div class="sec-2__poster-rate">7.2</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Мы владеем этим городом</h3>
-                </div>
-            </a>
-
-            <a href="#" class="sec-2__poster" data-filter-name="Фэнтези">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/32927.jpg" alt="#">
-                    <div class="sec-2__poster-label">42 / 28 серий</div>
-                    <div class="sec-2__poster-rate">8.3</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Во тьме</h3>
-                </div>
-            </a>
-
-            <a href="#" class="sec-2__poster" data-filter-name="Документальные">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/33202.jpg" alt="#">
-                    <div class="sec-2__poster-label">12 / 7 серий</div>
-                    <div class="sec-2__poster-rate">9.1</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Двенадцать</h3>
-                </div>
-            </a>
-
-            <a href="#" class="sec-2__poster" data-filter-name="Биография">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/33370.jpg" alt="#">
-                    <div class="sec-2__poster-label">56 / 29 серий</div>
-                    <div class="sec-2__poster-rate">9.3</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Лоббист</h3>
-                </div>
-            </a>
-
-            <a href="#" class="sec-2__poster" data-filter-name="Фантастика">
-                <div class="sec-2__poster-img">
-                    <img src="./img/banners/32887.jpg" alt="#">
-                    <div class="sec-2__poster-label">40 / 10 серий</div>
-                    <div class="sec-2__poster-rate">9.4</div>
-                </div>
-                <div class="sec-2__poster-desc">
-                    <h3 class="sec-2__poster-title">Мир Дикого запада</h3>
-                </div>
-            </a>
-            
-        </div>
-
-        <div class="sec-2__pagination">
-            <div class="pagination">
-                <ul></ul>
-              </div>
-        </div>
-
     </section>
 
     <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__collum">
-                <span class="footer__title">О нас</span>
-                    <ul class="footer__linkList">
-                        <li><a href="#" class="footer__linkItem">О компании</a></li>
-                        <li><a href="#" class="footer__linkItem">Информация для партнёров</a></li>
-                        <li><a href="#" class="footer__linkItem">Размещение рекламы</a></li>
-                        <li><a href="#" class="footer__linkItem">Пользовательское соглашение</a></li>
-                        <li><a href="#" class="footer__linkItem">Политика конфиденциальности</a></li>
-                        <li><a href="#" class="footer__linkItem">Вакансии</a></li>                        
-                    </ul>
-            </div>
-
-            <div class="footer__collum">
-                <span class="footer__title">Разделы</span>
-                    <ul class="footer__linkList">
-                        <li><a href="#" class="footer__linkItem">Что нового</a></li>
-                        <li><a href="#" class="footer__linkItem">Фильмы</a></li>
-                        <li><a href="#" class="footer__linkItem">Сериалы</a></li>
-                        <li><a href="#" class="footer__linkItem">Мультфильмы</a></li>
-                        <li><a href="#" class="footer__linkItem">Аниме</a></li>
-                        <li><a href="#" class="footer__linkItem">Что посмотреть</a></li>
-                    </ul>
-            </div>
-
-            <div class="footer__collum">
-                <span class="footer__title">Служба поддержки</span>
-                <ul class="footer__linkList">
-                    <div class="footer__discription">
-                        <span class="footer__support">Мы всегда готовы вам помочь.</span><br>
-                        <span class="footer__support">Наши операторы онлайн 24/7</span>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer__container">
+                    <div class="footer__collum">
+                        <span class="footer__title">О нас</span>
+                            <ul class="footer__linkList">
+                                <li><a href="#" class="footer__linkItem">О компании</a></li>
+                                <li><a href="#" class="footer__linkItem">Информация для партнёров</a></li>
+                                <li><a href="#" class="footer__linkItem">Размещение рекламы</a></li>
+                                <li><a href="#" class="footer__linkItem">Пользовательское соглашение</a></li>
+                                <li><a href="#" class="footer__linkItem">Политика конфиденциальности</a></li>
+                                <li><a href="#" class="footer__linkItem">Вакансии</a></li>                        
+                            </ul>
                     </div>
-                    <button class="footer__btn btn-1">Написать в чате</button>
-                </ul>    
-            </div>
 
-            <div class="footer__collum"><a href="index.html"><img class="footer__logo" src="./img/Untitled design-Max-Quality123112.jpg" alt="#"></a>
-            </div>
+                    <div class="footer__collum">
+                        <span class="footer__title">Разделы</span>
+                            <ul class="footer__linkList">
+                                <li><a href="#" class="footer__linkItem">Что нового</a></li>
+                                <li><a href="#" class="footer__linkItem">Фильмы</a></li>
+                                <li><a href="#" class="footer__linkItem">Сериалы</a></li>
+                                <li><a href="#" class="footer__linkItem">Мультфильмы</a></li>
+                                <li><a href="#" class="footer__linkItem">Аниме</a></li>
+                                <li><a href="#" class="footer__linkItem">Что посмотреть</a></li>
+                            </ul>
+                    </div>
 
+                    <div class="footer__collum">
+                        <span class="footer__title">Служба поддержки</span>
+                        <ul class="footer__linkList">
+                            <div class="footer__discription">
+                                <span class="footer__support">Мы всегда готовы вам помочь.</span><br>
+                                <span class="footer__support">Наши операторы онлайн 24/7</span>
+                            </div>
+                            <button class="footer__btn btn-1">Написать в чате</button>
+                        </ul>    
+                    </div>
+
+                    <div class="footer__collum"><a href="index.html"><img class="footer__logo" src="./img/Untitled design-Max-Quality123112.jpg" alt="#"></a>
+                    </div>
+
+                </div>
+
+                <div class="footer__container">
+                    <div class="footer__collum__wide">
+                        <div class="footer__dwn-links">
+                        <a href="#" class="footer__btn2">
+                            <img src="./img/appleLogo.svg" alt="#" class="footer__btn-img">
+                            <div class="footer__btn-textBlock">
+                                <div class="footer__btn-preamble">Загрузить в</div>
+                                <div class="footer__btn-caption">App Store</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="footer__btn2">
+                            <img src="./img/googlePlayLogo.svg" alt="#" class="footer__btn-img">
+                            <div class="footer__btn-textBlock">
+                            <div class="footer__btn-preamble">Доступно в</div>
+                            <div class="footer__btn-caption">Google Play</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="footer__btn2">
+                            <img src="./img/smart-tv2.png" alt="#" class="footer__btn-img">
+                            <div class="footer__btn-textBlock">
+                            <div class="footer__btn-preamble">Смотрите на</div>
+                            <div class="footer__btn-caption">Smart TV</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="footer__btn2">
+                            <img src="./img/television.png" alt="#" class="footer__btn-img">
+                            <div class="footer__btn-textBlock">
+                            <div class="footer__btn-preamble">Все</div>
+                            <div class="footer__btn-caption">устройства</div>
+                            </div>
+                        </a>
+
+                        </div>
+
+                        <div class="footer__copyrights">
+                        <span class="footer__copyrights-content">© 2022 ООО «Series Killer»</span><br>
+                        <span class="footer__copyrights-content">HBO ® and related service marks are the property of Home Box Office, Inc</span>
+                        </div>
+                    </div>
+
+                    <div class="footer__collum__wide-2">
+                    <ul class="wrapper">
+                        <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        </li>
+                        <li class="icon twitter">
+                        <span class="tooltip">Twitter</span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        </li>
+                        <li class="icon github">
+                        <span class="tooltip">Github</span>
+                        <span><i class="fab fa-github"></i></span>
+                        </li>
+                        <li class="icon youtube">
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                        </li>
+                    </ul>
+                    </div>
+                    
+                </div> 
+            </div>
         </div>
-
-        <div class="footer__container">
-            <div class="footer__collum__wide">
-                <div class="footer__dwn-links">
-                  <a href="#" class="footer__btn2">
-                      <img src="./img/appleLogo.svg" alt="#" class="footer__btn-img">
-                      <div class="footer__btn-textBlock">
-                        <div class="footer__btn-preamble">Загрузить в</div>
-                        <div class="footer__btn-caption">App Store</div>
-                      </div>
-                  </a>
-
-                  <a href="#" class="footer__btn2">
-                    <img src="./img/googlePlayLogo.svg" alt="#" class="footer__btn-img">
-                    <div class="footer__btn-textBlock">
-                      <div class="footer__btn-preamble">Доступно в</div>
-                      <div class="footer__btn-caption">Google Play</div>
-                    </div>
-                  </a>
-
-                  <a href="#" class="footer__btn2">
-                    <img src="./img/smart-tv2.png" alt="#" class="footer__btn-img">
-                    <div class="footer__btn-textBlock">
-                      <div class="footer__btn-preamble">Смотрите на</div>
-                      <div class="footer__btn-caption">Smart TV</div>
-                    </div>
-                  </a>
-
-                  <a href="#" class="footer__btn2">
-                    <img src="./img/television.png" alt="#" class="footer__btn-img">
-                    <div class="footer__btn-textBlock">
-                      <div class="footer__btn-preamble">Все</div>
-                      <div class="footer__btn-caption">устройства</div>
-                    </div>
-                  </a>
-
-                </div>
-
-                <div class="footer__copyrights">
-                  <span class="footer__copyrights-content">© 2022 ООО «Series Killer»</span><br>
-                  <span class="footer__copyrights-content">HBO ® and related service marks are the property of Home Box Office, Inc</span>
-                </div>
-            </div>
-
-            <div class="footer__collum__wide">
-              <ul class="wrapper">
-                <li class="icon facebook">
-                  <span class="tooltip">Facebook</span>
-                  <span><i class="fab fa-facebook-f"></i></span>
-                </li>
-                <li class="icon twitter">
-                  <span class="tooltip">Twitter</span>
-                  <span><i class="fab fa-twitter"></i></span>
-                </li>
-                <li class="icon instagram">
-                  <span class="tooltip">Instagram</span>
-                  <span><i class="fab fa-instagram"></i></span>
-                </li>
-                <li class="icon github">
-                  <span class="tooltip">Github</span>
-                  <span><i class="fab fa-github"></i></span>
-                </li>
-                <li class="icon youtube">
-                  <span class="tooltip">Youtube</span>
-                  <span><i class="fab fa-youtube"></i></span>
-                </li>
-              </ul>
-            </div>
-            
-        </div> 
     </footer>
 
 
@@ -582,6 +609,7 @@
 
 
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script src="./JS/popup.js"></script>
 <script src="./JS/hidden-activ.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

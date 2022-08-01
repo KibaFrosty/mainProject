@@ -1,24 +1,22 @@
-// .container {
-//     display: flex;
-//     align-items: center;
-// }
-
 .header {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
     border-bottom: 3px solid #ff6666;
+    padding: 10px 0px;
 
+    &-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &__search {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 390px;
-    margin-left: 30px;
-   
+    width: 100%;
     }
 
+    
     &__h1 {
         text-transform: uppercase;
         font-size: 22px;
@@ -44,7 +42,7 @@
     }
 
     &__search_bar {
-        width: 540px;
+        width: 450px;
         height: 40px;
     
         background: white;
@@ -78,7 +76,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;   
+        align-items: center;  
+        text-align: center; 
+        margin-right: 15px;
     }
 
     &__img {
@@ -98,11 +98,15 @@
 
     &__menu {
         display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: center;
     }
 
     &__menu ul {
         display: inline;
         margin-right: 5px;
+        margin-bottom: unset;
     }
 
     &__menu li {
@@ -110,7 +114,6 @@
     }
 
     &__menu li a {
-        height: 80px;
         display: flex;
         align-items: center;
         text-transform: uppercase;
@@ -122,7 +125,7 @@
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.01em;
     }
@@ -238,6 +241,32 @@
         color:#000000;
         text-decoration:none;
         font-weight:600;
+      }
+      @media  screen and ( max-width: 1280px) {
+        &__search {
+          margin-bottom: 20px;
+        }
+        &-line {
+          flex-flow: column;
+          align-items: center;
+        }
+        &__menu {
+          flex-flow: column;
+          margin-bottom: 15px;
+        }
+        &__menu ul {
+          width: 100%;
+          padding: unset;
+        }
+        &__menu ul + ul {
+          margin-top: 10px;
+        }
+        &__menu li a { 
+          width: 100%;
+          text-align: center;
+          display: inline-block;
+        }
+
       }
 }
 

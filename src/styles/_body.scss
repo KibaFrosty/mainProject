@@ -3,6 +3,7 @@
     padding: 40px 10px;
     width: 240px;
     position: relative;
+    float: left;
 }
 
 .side-block {
@@ -74,12 +75,12 @@
         text-decoration: none
     }
 
-    .menu-active {
-        transition: all 0.5s ease;
-        opacity: 1;
-        visibility: visible;
-        top: 50%;
-    }
+    // .menu-active {
+    //     transition: all 0.5s ease;
+    //     opacity: 1;
+    //     visibility: visible;
+    //     top: 50%;
+    // }
 }
 
 ul {
@@ -128,14 +129,16 @@ a {
          -4px -4px 5px 0px #fff9,
          7px 7px 20px 0px #0002,
          4px 4px 5px 0px #0001;
+
+    color: white;
 }
 
 .main {
         display: flex;
 
     &__img-portret {
-        width: 230px;
-        height: 275px;
+        height: 100%;
+        max-width: 100%;
         object-fit: cover;
         border-radius: 5px;
     }
@@ -152,16 +155,20 @@ a {
     }
 }
 
+.menu-slider {
+    display: flex;
+}
+
 .swiper {
     width: 100%;
-    height: 300px;
+    height: 350px;
     margin-top: 40px;
     margin-bottom: 28px;
   }
 
-.swiper-banners {
+.swiper-banners a{
     display: flex;
-    justify-content: space-evenly;
+    flex-flow: column;
     align-items: center;
 }
 
@@ -173,7 +180,6 @@ a {
 }
 
 .sec-1 {
-        margin-left: 242px;
 
     &__header {
         display: flex;
@@ -204,9 +210,9 @@ a {
 
     &__block_list_item {
         cursor: pointer;
-        display: table;
+        display: flex;
         min-height: 35px;
-        width: 90%;
+        width: 100%;
         padding: 10px 0;
         border-bottom: 1px solid #ececec;
     }
@@ -218,8 +224,8 @@ a {
     }
 
     &__block_list_item_img{
-        width: 60px;
-        height: 60px;
+        width: 102px;
+        height: 154px;
         margin-right: 10px;
         float: left;
         object-fit: cover;
@@ -258,7 +264,6 @@ a {
 }
 
 .sec-2{
-    margin-left: 242px;
 
     &__header {
         margin-top: 30px;
@@ -445,6 +450,11 @@ a {
     &__poster-title:hover {
         color: #ff3f4c;
     }
+    @media screen and(max-width: 768px) {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .pagination ul{
@@ -503,7 +513,6 @@ a {
   .footer {
     position: relative;
     margin-top: 50px;
-    width: 1440px;
     margin-left: auto;
     margin-right: auto;
 
@@ -549,9 +558,8 @@ a {
         outline: none;
     }
       &__btn {
-        width: 170px;
-        height: 40px;
-        padding: 10px 25px;
+        width: 142px;
+        padding: 10px 15px;
         border: 2px solid #ff3f4c;
         font-family: 'Lato', sans-serif;
         font-weight: 500;
@@ -574,13 +582,17 @@ a {
     }
 
     &__collum__wide {
-        width: 50%;
+        width: 80%;
+    }
+
+    &__collum__wide-2 {
+        flex-grow: 1;
     }
 
     &__btn2 {
         display: flex;
         border-radius: 8px;
-        width: 140px;
+        width: 15%;
         height: 40px;
         cursor: pointer;
         border: 0;
@@ -590,6 +602,10 @@ a {
         color: white;
         text-align: center;
         transition: all 0.3s ease;
+    }
+
+    &__btn2 + &__btn2 {
+        margin-left: 5px;
     }
 
     &__dwn-links {
@@ -605,6 +621,8 @@ a {
          -4px -4px 5px 0px #fff9,
          7px 7px 20px 0px #0002,
          4px 4px 5px 0px #0001;
+
+        color: white;
     }
 
     &__btn-img {
@@ -641,7 +659,78 @@ a {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+    @media screen and (max-width: 786px) {
+        &__container {
+            flex-flow: column;
+        }
+        &__collum {
+            width: 100%;
+        }    
+        &__collum__wide {
+            width: 100%;
+        }
+        &__dwn-links {
+            flex-flow: column
+        }
+        
+        &__dwn-links a + a {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__collum {
+            width: 33%;
+        }
+    }
+
+    @media screen and (max-width: 540px) {
+        
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 1440px) {
+        &__btn2 {
+            width: 23%;
+        }
+        
+        &__btn2 + &__btn2 {
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 990px) {
+        &__btn2 {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 790px) {
+        &__btn2 {
+            width: 33%;
+        }
+
+        &__btn2 + &__btn2 {
+            margin-left: unset;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        &__btn2 {
+            width: 100%;
+        }
+
+        &__btn2 + &__btn2 {
+            margin-left: unset;
+        }
+    }
+    
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -654,7 +743,7 @@ a {
 .wrapper {
     display: inline-flex;
     list-style: none;
-    margin-left: 150px;
+    margin-left: 3px;
   }
   
   .wrapper .icon {
@@ -662,7 +751,6 @@ a {
     background: #ffffff;
     border-radius: 50%;
     padding: 15px;
-    margin: 10px;
     width: 50px;
     height: 50px;
     font-size: 18px;
@@ -675,6 +763,10 @@ a {
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
+  .wrapper .icon + .icon {
+    margin-left: 10px;
+  }
+
   .wrapper .tooltip {
     position: absolute;
     top: 0;
@@ -746,6 +838,17 @@ a {
   .wrapper .youtube:hover .tooltip::before {
     background: #CD201F;
     color: #ffffff;
+  }
+  @media screen and(max-width: 768px) {
+    .wrapper {
+        margin-left: unset;
+        margin-top: 20px;
+    }    
+    .wrapper .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
   }
 
   
